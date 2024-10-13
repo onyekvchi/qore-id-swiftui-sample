@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CD00B5802CBC384500C605A8 /* QoreIDSDK in Frameworks */ = {isa = PBXBuildFile; productRef = CD00B57F2CBC384500C605A8 /* QoreIDSDK */; };
+		CD00B5832CBC38C300C605A8 /* QoreIDDependencies in Frameworks */ = {isa = PBXBuildFile; productRef = CD00B5822CBC38C300C605A8 /* QoreIDDependencies */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		CD00B56D2CBC338500C605A8 /* QoreIDSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QoreIDSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD00B5802CBC384500C605A8 /* QoreIDSDK in Frameworks */,
+				CD00B5832CBC38C300C605A8 /* QoreIDDependencies in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +72,8 @@
 			);
 			name = QoreIDSDKSample;
 			packageProductDependencies = (
+				CD00B57F2CBC384500C605A8 /* QoreIDSDK */,
+				CD00B5822CBC38C300C605A8 /* QoreIDDependencies */,
 			);
 			productName = QoreIDSDKSample;
 			productReference = CD00B56D2CBC338500C605A8 /* QoreIDSDKSample.app */;
@@ -94,6 +103,10 @@
 			);
 			mainGroup = CD00B5642CBC338500C605A8;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CD00B57E2CBC384500C605A8 /* XCRemoteSwiftPackageReference "QoreIDSDKiOS" */,
+				CD00B5812CBC38C300C605A8 /* XCRemoteSwiftPackageReference "QoreIDSDKiOSDependencies" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CD00B56E2CBC338500C605A8 /* Products */;
 			projectDirPath = "";
@@ -324,6 +337,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD00B57E2CBC384500C605A8 /* XCRemoteSwiftPackageReference "QoreIDSDKiOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QoreID/QoreIDSDKiOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+		CD00B5812CBC38C300C605A8 /* XCRemoteSwiftPackageReference "QoreIDSDKiOSDependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QoreID/QoreIDSDKiOSDependencies.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD00B57F2CBC384500C605A8 /* QoreIDSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD00B57E2CBC384500C605A8 /* XCRemoteSwiftPackageReference "QoreIDSDKiOS" */;
+			productName = QoreIDSDK;
+		};
+		CD00B5822CBC38C300C605A8 /* QoreIDDependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD00B5812CBC38C300C605A8 /* XCRemoteSwiftPackageReference "QoreIDSDKiOSDependencies" */;
+			productName = QoreIDDependencies;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CD00B5652CBC338500C605A8 /* Project object */;
 }
